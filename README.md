@@ -1,18 +1,21 @@
-# COVID-19-ETL
-A Python ETL pipeline that fetches, cleans, and stores Italy's COVID-19 confirmed cases data into a SQLite database for easy analysis.
+# COVID-19 ETL Project
 
-This project is a simple Python ETL (Extract, Transform, Load) pipeline that fetches COVID-19 confirmed case data for Italy from a public API, cleans and transforms the data, then stores it into a local SQLite database.
+This repository contains a Python ETL (Extract, Transform, Load) script that fetches, processes, and saves historical COVID-19 confirmed cases data for Italy using the [Disease.sh API](https://disease.sh/).
 
-## Features
-- Fetches daily COVID-19 case data via REST API
-- Cleans and normalizes data using pandas
-- Stores data into SQLite database for easy querying
-- Prints summary of recent confirmed cases
+## Overview
 
-## Requirements
-- Python 3.7+
-- Packages: `requests`, `pandas`
+- **Extract:** Downloads Italy's COVID-19 historical confirmed cases data.
+- **Transform:** Converts raw data into a clean format, calculates daily new cases, and filters out negative values.
+- **Load:** Saves the transformed data as a CSV file for further analysis.
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- `requests` and `pandas` libraries
+
+You can install the required Python packages using pip:
+
 ```bash
 pip install requests pandas
